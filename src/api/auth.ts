@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const URL_BASE = 'werewolf-api-q3lm.onrender.com'
+const URL_BASE = 'https://werewolf-api-q3lm.onrender.com'
 
-export const registerUser = async(data:{username: string,password:string, email: string}) => {
+export const registerUser = async(data:{username: string, password:string, email: string}) => {
     try {
         const response = await axios.post(`${URL_BASE}/api/create-user/`, data);
         return response.data;
@@ -12,7 +12,7 @@ export const registerUser = async(data:{username: string,password:string, email:
       }
 }
 
-export const loginUser = async(data:{username: string,password:string})   => {
+export const loginUser = async(data:{username: string, password:string})   => {
     try {
         const response = await axios.post(`${URL_BASE}/api/login/`, data);
         return response.data;
